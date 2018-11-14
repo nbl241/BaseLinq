@@ -21,7 +21,7 @@ namespace BaseLinq
             tabA = word.Trier(tabA);
             tabB = word.Trier(tabB);
 
-            Console.WriteLine("senteneA");
+            Console.WriteLine(word);
             Console.WriteLine("----------");
             foreach(var tab in tabA)
             {
@@ -30,7 +30,7 @@ namespace BaseLinq
             }
 
             Console.WriteLine();
-            Console.WriteLine("sentenceB");
+            Console.WriteLine(word);
             Console.WriteLine("----------");
 
             foreach (var tab in tabB)

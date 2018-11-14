@@ -54,10 +54,15 @@ namespace BaseLinq
 
         public Word[] Trier(Word[] words)
         {
-            var tableTrier = (from Word in words
-                             orderby Word.Value ascending
-                             select Word).ToArray();
+            var tableTrier = (from word in words
+                              orderby word.Value
+                              select word).ToArray();
             return tableTrier;
+        }
+
+        public Word[] FindWords(Word[] words)
+        {
+     
         }
     }
 }

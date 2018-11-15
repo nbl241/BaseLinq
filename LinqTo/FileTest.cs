@@ -12,7 +12,7 @@ namespace LinqTo
         public FileTest() { }
 
         //To linq
-        public string[] GetFiles(string cheminDossier, string partialName)
+        public string[] GetFiles(string cheminDossier)
         {
             string[] tab = Directory.GetFiles(cheminDossier);
             string[] result = tab.Where(x => x.Contains("m")).ToArray();
@@ -20,14 +20,14 @@ namespace LinqTo
         }
 
         //To sql
-        public List<string> GetFilesNames(string cheminDossier, string partialName)
-        {
-            var filesNames = Directory.GetFiles(cheminDossier);
+        //public List<string> GetFilesNames(string cheminDossier, string partialName)
+        //{
+        //    var filesNames = Directory.GetFiles(cheminDossier);
 
-            var listNames = from file in filesNames
-                            where file.ToUpper().Contains(partialName.ToUpper())
-                            select file;
-            return listNames.ToList();
-        }
+        //    var listNames = from file in filesNames
+        //                    where file.ToUpper().Contains(partialName.ToUpper())
+        //                    select file;
+        //    return listNames.ToList();
+        //}
     }
 }
